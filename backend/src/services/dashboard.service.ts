@@ -48,16 +48,17 @@ export async function getDashboardStats(userId: string) {
     inProgressTasks,
     completedTasks,
     overdueTasks,
-    tasksByStatus: {
-      TODO: todoTasks,
-      IN_PROGRESS: inProgressTasks,
-      DONE: completedTasks
-    },
-    tasksByPriority: {
-      LOW: tasks.filter((t: TaskSummary) => t.priority === "LOW").length,
-      MEDIUM: tasks.filter((t: TaskSummary) => t.priority === "MEDIUM").length,
-      HIGH: tasks.filter((t: TaskSummary) => t.priority === "HIGH").length
-    },
+    tasksByStatus: [
+  { status: "TODO", count: todoTasks },
+  { status: "IN_PROGRESS", count: inProgressTasks },
+  { status: "DONE", count: completedTasks }
+],
+
+tasksByPriority: [
+  { priority: "LOW", count: tasks.filter(t => t.priority === "LOW").length },
+  { priority: "MEDIUM", count: tasks.filter(t => t.priority === "MEDIUM").length },
+  { priority: "HIGH", count: tasks.filter(t => t.priority === "HIGH").length }
+],
     tasksPerProject: tasksByProject.map((p: ProjectSummary) => ({
       projectId: p.id,
       projectName: p.name,
