@@ -47,5 +47,5 @@ export const projectsApi = {
   updateMemberRole: async (id: string, memberId: string, role: string): Promise<ProjectMember> => {
     const res = await api.patch<ApiResponse<ProjectMember>>(`/projects/${id}/members/${memberId}`, { role });
     return unwrap(res.data);
-  },
+  }
 };

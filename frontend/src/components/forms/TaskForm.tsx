@@ -34,7 +34,7 @@ export function TaskForm({ projectId, task, members = [], onSuccess }: Props) {
           dueDate: task.dueDate?.slice(0, 10),
           assigneeId: task.assigneeId,
         }
-      : { status: "TODO", priority: "MEDIUM" },
+      : { status: "TODO", priority: "MEDIUM" }
   });
 
   const onSubmit = async (data: TaskSchema) => {

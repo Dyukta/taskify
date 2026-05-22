@@ -12,7 +12,7 @@ export function RegisterForm() {
   const [error, setError] = useState("");
 
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<RegisterSchema>({
-    resolver: zodResolver(registerSchema),
+    resolver: zodResolver(registerSchema)
   });
 
   const onSubmit = async (data: RegisterSchema) => {

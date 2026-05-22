@@ -22,5 +22,5 @@ export const tasksApi = {
   remove: async (id: string): Promise<void> => {
     const res = await api.delete<ApiResponse<void>>(`/tasks/${id}`);
     unwrap(res.data);
-  },
+  }
 };

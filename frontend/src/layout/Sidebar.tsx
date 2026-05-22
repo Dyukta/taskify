@@ -1,19 +1,13 @@
 import { NavLink } from "react-router-dom";
-import {
-  LayoutDashboard,
-  FolderKanban,
-  CheckSquare,
-  Users,
-  User,
-} from "lucide-react";
+import { LayoutDashboard, FolderKanban, CheckSquare, Users, User } from "lucide-react";
 import { Box } from "@mui/material";
 
 const links = [
-  { label: "Dashboard", path: "/",        icon: LayoutDashboard },
-  { label: "Projects",  path: "/projects", icon: FolderKanban   },
-  { label: "Tasks",     path: "/tasks",    icon: CheckSquare    },
-  { label: "Team",      path: "/team",     icon: Users          },
-  { label: "Profile",   path: "/profile",  icon: User           },
+  { label: "Dashboard", path: "/",  icon: LayoutDashboard },
+  { label: "Projects",  path: "/projects", icon: FolderKanban },
+  { label: "Tasks",     path: "/tasks", icon: CheckSquare },
+  { label: "Team",      path: "/team", icon: Users },
+  { label: "Profile",   path: "/profile",  icon: User }
 ];
 
 export function Sidebar() {
@@ -27,7 +21,7 @@ export function Sidebar() {
         display: { xs: "none", md: "flex" },
         flexDirection: "column",
         p: 2,
-        gap: 0.5,
+        gap: 0.5
       }}
     >
       <Box sx={{ px: 1, py: 1.5, mb: 1 }}>
@@ -61,7 +55,7 @@ export function Sidebar() {
                 transition: "all 0.15s",
                 "&:hover": !isActive
                   ? { bgcolor: "#f1f5f9", color: "#0f172a" }
-                  : {},
+                  : {}
               }}
             >
               <Icon size={16} />
@@ -69,7 +63,7 @@ export function Sidebar() {
                 component="span"
                 sx={{
                   fontSize: 13.5,
-                  fontWeight: isActive ? 600 : 500,
+                  fontWeight: isActive ? 600 : 500
                 }}
               >
                 {label}

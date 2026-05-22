@@ -2,16 +2,13 @@ import { Box, Alert } from "@mui/material";
 import { FolderKanban, CheckSquare, TrendingUp, AlertCircle } from "lucide-react";
 import { useDashboard } from "../hooks/useDashboard";
 import { StatCard } from "../components/ui/StatCard";
-import {
-  BarChart, Bar, XAxis, YAxis, Tooltip,
-  ResponsiveContainer, PieChart, Pie, Cell, Legend,
-} from "recharts";
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from "recharts";
 import type { PieLabelRenderProps } from "recharts";
 
 const STATUS_COLORS: Record<string, string> = {
-  TODO:        "#94a3b8",
+  TODO:  "#94a3b8",
   IN_PROGRESS: "#3b82f6",
-  DONE:        "#22c55e",
+  DONE:   "#22c55e",
 };
 
 const PRIORITY_COLORS: Record<string, string> = {
@@ -81,7 +78,7 @@ export default function Dashboard() {
         sx={{
           display: "grid",
           gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
-          gap: 3,
+          gap: 3
         }}
       >
         {statusData.length > 0 && (
@@ -90,7 +87,7 @@ export default function Dashboard() {
               bgcolor: "white",
               border: "1px solid #e2e8f0",
               borderRadius: 2.5,
-              p: 3,
+              p: 3
             }}
           >
             <Box component="span" sx={{ display: "block", fontWeight: 600, fontSize: 14, mb: 2.5 }}>
@@ -117,7 +114,7 @@ export default function Dashboard() {
               bgcolor: "white",
               border: "1px solid #e2e8f0",
               borderRadius: 2.5,
-              p: 3,
+              p: 3
             }}
           >
             <Box component="span" sx={{ display: "block", fontWeight: 600, fontSize: 14, mb: 2.5 }}>
@@ -159,7 +156,7 @@ export default function Dashboard() {
             bgcolor: "white",
             border: "1px solid #e2e8f0",
             borderRadius: 2.5,
-            p: 3,
+            p: 3
           }}
         >
           <Box component="span" sx={{ display: "block", fontWeight: 600, fontSize: 14, mb: 1 }}>
@@ -170,7 +167,7 @@ export default function Dashboard() {
               bgcolor: "#f1f5f9",
               borderRadius: 99,
               height: 8,
-              overflow: "hidden",
+              overflow: "hidden"
             }}
           >
             <Box
@@ -179,7 +176,7 @@ export default function Dashboard() {
                 height: "100%",
                 bgcolor: "#22c55e",
                 borderRadius: 99,
-                transition: "width 0.5s ease",
+                transition: "width 0.5s ease"
               }}
             />
           </Box>

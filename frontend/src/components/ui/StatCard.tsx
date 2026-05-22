@@ -27,7 +27,7 @@ export function StatCard({ title, value, icon, color = "#4f46e5" }: Props) {
                 fontSize: 12,
                 color: "text.secondary",
                 fontWeight: 500,
-                mb: 0.5,
+                mb: 0.5
               }}
             >
               {title}
@@ -38,7 +38,7 @@ export function StatCard({ title, value, icon, color = "#4f46e5" }: Props) {
                 display: "block",
                 fontSize: 26,
                 fontWeight: 700,
-                color: "text.primary",
+                color: "text.primary"
               }}
             >
               {value}
@@ -53,7 +53,7 @@ export function StatCard({ title, value, icon, color = "#4f46e5" }: Props) {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color,
+              color
             }}
           >
             {icon}

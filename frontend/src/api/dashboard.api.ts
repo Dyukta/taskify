@@ -7,5 +7,5 @@ export const dashboardApi = {
   getStats: async (): Promise<DashboardStats> => {
     const res = await api.get<ApiResponse<DashboardStats>>("/dashboard");
     return unwrap(res.data);
-  },
+  }
 };

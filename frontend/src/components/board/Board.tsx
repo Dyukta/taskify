@@ -10,7 +10,7 @@ type Props = {
 const COLUMNS = [
   { status: "TODO" as const,        label: "To Do",      color: "#94a3b8" },
   { status: "IN_PROGRESS" as const, label: "In Progress", color: "#3b82f6" },
-  { status: "DONE" as const,        label: "Done",        color: "#22c55e" },
+  { status: "DONE" as const,        label: "Done",        color: "#22c55e" }
 ];
 
 export function Board({ tasks, onTaskClick }: Props) {

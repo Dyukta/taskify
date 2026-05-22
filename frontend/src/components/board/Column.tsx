@@ -20,7 +20,7 @@ export function Column({ title, tasks, color = "#4f46e5", onTaskClick }: Props) 
         border: "1px solid #e2e8f0",
         display: "flex",
         flexDirection: "column",
-        maxHeight: "100%",
+        maxHeight: "100%"
       }}
     >
       <Box
@@ -30,7 +30,7 @@ export function Column({ title, tasks, color = "#4f46e5", onTaskClick }: Props) 
           display: "flex",
           alignItems: "center",
           gap: 1,
-          borderBottom: "1px solid #e2e8f0",
+          borderBottom: "1px solid #e2e8f0"
         }}
       >
         <Box sx={{ width: 8, height: 8, borderRadius: "50%", bgcolor: color }} />
@@ -50,7 +50,7 @@ export function Column({ title, tasks, color = "#4f46e5", onTaskClick }: Props) 
             py: 0.2,
             borderRadius: 1,
             fontSize: 11,
-            fontWeight: 600,
+            fontWeight: 600
           }}
         >
           {tasks.length}
@@ -64,7 +64,7 @@ export function Column({ title, tasks, color = "#4f46e5", onTaskClick }: Props) 
           flexDirection: "column",
           gap: 1,
           overflowY: "auto",
-          flex: 1,
+          flex: 1
         }}
       >
         {tasks.length === 0 ? (
@@ -75,7 +75,7 @@ export function Column({ title, tasks, color = "#4f46e5", onTaskClick }: Props) 
               color: "text.disabled",
               textAlign: "center",
               py: 3,
-              display: "block",
+              display: "block"
             }}
           >
             No tasks

@@ -13,7 +13,7 @@ export default function Error() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        gap: 2,
+        gap: 2
       }}
     >
       <AlertTriangle size={40} color="#ef4444" />

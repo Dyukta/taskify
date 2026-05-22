@@ -1,11 +1,4 @@
-import {
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  Button,
-  Box,
-} from "@mui/material";
+import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Box} from "@mui/material";
 
 type Props = {
   open: boolean;
@@ -22,7 +15,7 @@ export function ConfirmDialog({
   description = "Are you sure?",
   loading,
   onConfirm,
-  onClose,
+  onClose
 }: Props) {
   return (
     <Dialog open={open} onClose={onClose} maxWidth="xs" fullWidth>

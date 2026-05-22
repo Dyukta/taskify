@@ -8,21 +8,21 @@ export const useProject = (id: string) =>
   useQuery({
     queryKey: ["project", id],
     queryFn: () => projectsApi.getById(id),
-    enabled: !!id,
+    enabled: !!id
   });
 
 export const useProjectMembers = (id: string) =>
   useQuery({
     queryKey: ["project-members", id],
     queryFn: () => projectsApi.getMembers(id),
-    enabled: !!id,
+    enabled: !!id
   });
 
 export const useCreateProject = () => {
   const qc = useQueryClient();
   return useMutation({
     mutationFn: projectsApi.create,
-    onSuccess: () => qc.invalidateQueries({ queryKey: ["projects"] }),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ["projects"] })
   });
 };
 
@@ -34,7 +34,7 @@ export const useUpdateProject = () => {
     onSuccess: (_d, vars) => {
       qc.invalidateQueries({ queryKey: ["projects"] });
       qc.invalidateQueries({ queryKey: ["project", vars.id] });
-    },
+    }
   });
 };
 
@@ -42,7 +42,7 @@ export const useDeleteProject = () => {
   const qc = useQueryClient();
   return useMutation({
     mutationFn: projectsApi.remove,
-    onSuccess: () => qc.invalidateQueries({ queryKey: ["projects"] }),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ["projects"] })
   });
 };
 
@@ -51,7 +51,7 @@ export const useAddMember = (projectId: string) => {
   return useMutation({
     mutationFn: (data: { email: string; role: string }) =>
       projectsApi.addMember(projectId, data),
-    onSuccess: () => qc.invalidateQueries({ queryKey: ["project-members", projectId] }),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ["project-members", projectId] })
   });
 };
 
@@ -59,6 +59,6 @@ export const useRemoveMember = (projectId: string) => {
   const qc = useQueryClient();
   return useMutation({
     mutationFn: (memberId: string) => projectsApi.removeMember(projectId, memberId),
-    onSuccess: () => qc.invalidateQueries({ queryKey: ["project-members", projectId] }),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ["project-members", projectId] })
   });
 };

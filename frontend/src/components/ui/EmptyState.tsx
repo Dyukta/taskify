@@ -17,7 +17,7 @@ export function EmptyState({ title, description, actionLabel, onAction }: Props)
         alignItems: "center",
         justifyContent: "center",
         py: 10,
-        gap: 1.5,
+        gap: 1.5
       }}
     >
       <Box sx={{ bgcolor: "#f1f5f9", borderRadius: 3, p: 2, mb: 0.5 }}>

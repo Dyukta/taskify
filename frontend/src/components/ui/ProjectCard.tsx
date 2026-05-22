@@ -51,7 +51,7 @@ export function ProjectCard({ project }: Props) {
               display: "-webkit-box",
               WebkitLineClamp: 2,
               WebkitBoxOrient: "vertical",
-              overflow: "hidden",
+              overflow: "hidden"
             }}
           >
             {project.description}

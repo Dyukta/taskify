@@ -10,7 +10,7 @@ type Props = {
 const priorityColors: Record<string, { bg: string; color: string }> = {
   LOW:    { bg: "#f0fdf4", color: "#16a34a" },
   MEDIUM: { bg: "#fffbeb", color: "#d97706" },
-  HIGH:   { bg: "#fef2f2", color: "#dc2626" },
+  HIGH:   { bg: "#fef2f2", color: "#dc2626" }
 };
 
 export function TaskCard({ task, onClick }: Props) {
@@ -24,7 +24,7 @@ export function TaskCard({ task, onClick }: Props) {
     <Card
       sx={{
         cursor: onClick ? "pointer" : "default",
-        "&:hover": onClick ? { boxShadow: "0 4px 12px rgba(0,0,0,0.09)" } : {},
+        "&:hover": onClick ? { boxShadow: "0 4px 12px rgba(0,0,0,0.09)" } : {}
       }}
       onClick={onClick}
     >
@@ -38,7 +38,7 @@ export function TaskCard({ task, onClick }: Props) {
             overflow: "hidden",
             fontSize: 13.5,
             fontWeight: 500,
-            mb: 1,
+            mb: 1
           }}
         >
           {task.title}
@@ -49,7 +49,7 @@ export function TaskCard({ task, onClick }: Props) {
             display: "flex",
             alignItems: "center",
             gap: 1,
-            flexWrap: "wrap",
+            flexWrap: "wrap"
           }}
         >
           <Chip
@@ -60,7 +60,7 @@ export function TaskCard({ task, onClick }: Props) {
               color: pc.color,
               fontWeight: 600,
               height: 20,
-              fontSize: "0.65rem",
+              fontSize: "0.65rem"
             }}
           />
 
@@ -70,7 +70,7 @@ export function TaskCard({ task, onClick }: Props) {
                 display: "flex",
                 alignItems: "center",
                 gap: 0.4,
-                color: isOverdue ? "#dc2626" : "#94a3b8",
+                color: isOverdue ? "#dc2626" : "#94a3b8"
               }}
             >
               <Calendar size={11} />
@@ -80,7 +80,7 @@ export function TaskCard({ task, onClick }: Props) {
               >
                 {new Date(task.dueDate).toLocaleDateString("en-US", {
                   month: "short",
-                  day: "numeric",
+                  day: "numeric"
                 })}
               </Box>
             </Box>
@@ -99,7 +99,7 @@ export function TaskCard({ task, onClick }: Props) {
                 alignItems: "center",
                 justifyContent: "center",
                 fontSize: 10,
-                fontWeight: 600,
+                fontWeight: 600
               }}
             >
               {task.assignee.name[0].toUpperCase()}

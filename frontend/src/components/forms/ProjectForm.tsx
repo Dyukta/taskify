@@ -18,8 +18,8 @@ export function ProjectForm({ project, onSuccess }: Props) {
 
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<ProjectSchema>({
     resolver: zodResolver(projectSchema),
-    defaultValues: project ? { name: project.name, description: project.description ?? "" } : undefined,
-  });
+    defaultValues: project ? { name: project.name, description: project.description ?? "" } : undefined
+    });
 
   const onSubmit = async (data: ProjectSchema) => {
     try {

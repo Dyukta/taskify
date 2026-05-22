@@ -36,7 +36,7 @@ export function Header() {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        flexShrink: 0,
+        flexShrink: 0
       }}
     >
       <Box component="span" sx={{ fontWeight: 600, fontSize: 15 }}>
@@ -49,7 +49,7 @@ export function Header() {
             width: 30,
             height: 30,
             bgcolor: "primary.main",
-            fontSize: 13,
+            fontSize: 13
           }}
         >
           {user?.name?.[0]?.toUpperCase()}
@@ -59,7 +59,7 @@ export function Header() {
           sx={{
             fontSize: 13,
             color: "text.secondary",
-            display: { xs: "none", sm: "block" },
+            display: { xs: "none", sm: "block" }
           }}
         >
           {user?.name}
