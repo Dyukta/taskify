@@ -11,13 +11,12 @@ import { errorHandler } from "./middleware/error.middleware";
 
 const app = express();
 
-/* CORS FIX (clean dev-safe setup) */
 app.use(
   cors({
-    origin: true,
+    origin: "https://taskify-livid-eta.vercel.app",
     credentials: true,
   })
-);
+);;
 
 app.use(helmet());
 
