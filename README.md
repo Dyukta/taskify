@@ -49,19 +49,19 @@ The goal was to build something that feels modern and intuitive like Linear, Tre
 # Engineering Decisions
 
 ## React + TypeScript
-Used TypeScript across the stack to keep the codebase predictable, scalable, and easier to maintain as features grow.
+Used TypeScript across the stack to keep the codebase predictable, scalable and easier to maintain as features grow.
 
 ---
 
 ## TanStack Query
-Handled API state, caching, mutations, and invalidation through TanStack Query instead of manually managing async state.
+Handled API state, caching, mutations and invalidation through TanStack Query instead of manually managing async state.
 
 This reduced boilerplate and improved reliability around server synchronization.
 
 ---
 
 ## Tailwind + Material UI
-Used Tailwind for layout and responsiveness while using Material UI for complex interactive components like dialogs, forms, tables, menus, and feedback states.
+Used Tailwind for layout and responsiveness while using Material UI for complex interactive components like dialogs, forms, tables, menus and feedback states.
 
 This gave faster development speed while keeping the UI consistent.
 
