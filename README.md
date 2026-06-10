@@ -1,8 +1,8 @@
 # Taskify
 
-Taskify is a collaborative task management platform built to support real team workflows with project organization, task tracking, role-based access, and analytics.
+Taskify is a full stack collaborative task management platform designed for teams to organize projects, assign work and track progress through a structured workflow system.
 
-The goal was to build something that feels modern and intuitive like Linear, Trello and Asana while keeping the architecture scalable and production oriented.
+It is built to reflect real team usage patterns with role based access control, task tracking and a live dashboard for project visibility.
 
 
 live link : https://taskify-livid-eta.vercel.app/login
@@ -18,17 +18,14 @@ live link : https://taskify-livid-eta.vercel.app/login
 
 # What I Built
 
-- Secure authentication with JWT and HttpOnly cookies
-- Role-based access control for admins and members
-- Project and team management
+- JWT authentication with secure HttpOnly cookies
+- Role-based access control (Admin / Member)
+- Project and team management system
 - Kanban-style task workflow
-- Task filtering, assignment, priorities, and due dates
-- Dashboard analytics and charts
+- Task assignment, filtering, priority and due dates
+- Dashboard with aggregated analytics
 - Responsive UI for desktop and mobile
-- Reusable component architecture
-- Form validation and centralized error handling
-- Protected frontend routing and persistent sessions
-
+- Protected routes with persistent sessions
 ---
 
 # Tech Stack
@@ -64,9 +61,7 @@ Used TypeScript across the stack to keep the codebase predictable, scalable and 
 ---
 
 ## TanStack Query
-Handled API state, caching, mutations and invalidation through TanStack Query instead of manually managing async state.
-
-This reduced boilerplate and improved reliability around server synchronization.
+Handled caching, synchronization and API state without manual state management.
 
 ---
 
@@ -91,35 +86,21 @@ Authentication uses secure HttpOnly cookies instead of localStorage to improve s
 
 ---
 
-# Things I Focused On
-
-- Clean and modular folder structure
-- Reusable components and hooks
-- Strict TypeScript usage
-- Minimal prop drilling
-- Proper loading, error, and empty states
-- Responsive design
-- Real-world permission handling
-- Separation between admin and member capabilities
-- Production-ready deployment structure
-
----
-
 # Tradeoffs
 
-## Tailwind + MUI Together
-This slightly increases bundle size, but significantly improves development speed and maintainability.
+- No realtime updates (kept architecture simpler and stable)
+- No GraphQL (REST chosen for speed and clarity)
+- No optimistic updates (reduced UI complexity)
+- No drag and drop Kanban (scope control)
 
 ---
-
-## REST API Instead of GraphQL
-REST was simpler and more practical for the scope of this project while still keeping the backend clean and scalable.
-
----
-
-## No Realtime Features
-Realtime collaboration and sockets were intentionally skipped to prioritize building a stable and maintainable core product first.
-
+# What This Project Demonstrates
+- Full stack system design
+- Authentication and authorization systems
+- Role-based permissions at API level
+- Relational database design with Prisma
+- Production-ready deployment workflow
+- Scalable React architecture patterns
 ---
 
 # Deployment
@@ -129,22 +110,6 @@ Realtime collaboration and sockets were intentionally skipped to prioritize buil
 | Frontend | Vercel |
 | Backend | Render |
 | Database | Neon PostgreSQL |
-
----
-
-# What I Learned
-
-This project helped strengthen practical experience with:
-
-- Full stack architecture
-- Authentication systems
-- Role-based authorization
-- Query management
-- Database relations with Prisma
-- Production deployment
-- Scalable React patterns
-- Error handling and validation
-- Building maintainable TypeScript applications
 
 ---
 
